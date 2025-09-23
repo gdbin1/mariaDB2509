@@ -28,11 +28,21 @@ CREATE TABLE productTBL(
 	company CHAR(15),
 	amount INT NOT null
 );
+
 -- productTBL테이블에 값 대입
 INSERT INTO producttbl VALUES('컴퓨터', 10, '2013.1.1', '삼성', 17);
 INSERT INTO producttbl VALUES('세탁기', 20, '2014.9.1', 'LG', 3);
 INSERT INTO producttbl VALUES('냉장고', 5, '2015.2.1', '대우', 22);
 
+-- indexTBL 테이블 생성
+-- 교재에서 테이블만 만들라하고 값 뭐넣으라고 안나옴;;
+CREATE TABLE indexTBL(
+	first_name VARCHAR(14),
+	last_name VARCHAR(16),
+	hire_date date
+);
+DROP TABLE indextbl;
+SELECT * FROM indexTBL;
 -- 각 테이블 열과 행 전체 확인
 SELECT * FROM membertbl;
 SELECT * FROM producttbl;
@@ -41,6 +51,7 @@ SELECT COUNT(*) FROM membertbl;
 SELECT COUNT(*) FROM producttbl;
 -- 지운이 찾기
 SELECT * FROM membertbl WHERE memberName = '지운이';
+-- membertbl에서 memberName이랑, memberAddress만 보기
 SELECT memberName, memberAddress FROM membertbl;
 
 
