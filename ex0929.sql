@@ -138,4 +138,11 @@ SELECT NAME, height
 FROM usertbl
 WHERE height IN (SELECT height FROM usertbl WHERE addr = '경남');
 
+-- sort (정렬) order by mdate별로 정렬
+SELECT NAME, mDate 
+FROM userTbl
+ORDER BY mdate;
+
+
+
 
